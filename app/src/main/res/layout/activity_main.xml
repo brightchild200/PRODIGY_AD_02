@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bk4">
+
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Task List"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:background="@color/header_brown"
+        android:padding="16dp" />
+
+    <!-- Task List Container -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/llTaskContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Tasks will be added dynamically -->
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/header_brown"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Completed Tasks Button -->
+        <LinearLayout
+            android:id="@+id/llCompletedTasks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground">
+
+            <ImageView
+                android:id="@+id/ivDropdown"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/dropdown"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tvCompletedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed Task"
+                android:layout_gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Add Button -->
+        <ImageButton
+            android:id="@+id/btnAddMain"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/add"
+            android:contentDescription="Add"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

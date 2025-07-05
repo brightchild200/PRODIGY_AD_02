@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFF7F2">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Task"
+            android:textSize="24sp"
+            android:textColor="@color/header_brown"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/back_button"
+            android:src="@drawable/back_button"
+            android:contentDescription="Back arrow" />
+    </LinearLayout>
+
+    <!-- Task Label -->
+
+    <!-- Bottom Border -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/header_brown"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Task Description Box -->
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTaskInput"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:hint="Enter task description"
+        android:inputType="text"
+        android:textColorHint="@color/header_brown"
+        android:textColor="#333333"
+        android:padding="16dp"
+            android:textSize="16sp"
+            android:gravity="top|start"
+          android:layout_marginBottom="10dp"
+            android:background="@drawable/task_background"/>
+
+    <!--    <EditText-->
+<!--        android:id="@+id/taskDescription"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:hint="Task Description"-->
+<!--        android:textColorHint="@color/header_brown"-->
+<!--        android:textColor="#333333"-->
+<!--        android:background="@drawable/task_background"-->
+<!--        android:padding="16dp"-->
+<!--        android:textSize="16sp"-->
+<!--        android:gravity="top|start"-->
+<!--        android:layout_marginBottom="10dp" />-->
+
+    <!-- Button Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Add Button -->
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Add"
+            android:backgroundTint="@color/header_brown"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Edit Button -->
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit"
+            android:backgroundTint="#4D3B33"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#F61C10" />
+    </LinearLayout>
+
+</LinearLayout>
